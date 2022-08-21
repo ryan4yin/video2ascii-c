@@ -361,11 +361,10 @@ static void print_charimg(unsigned char *buf, int wrap, int xsize, int ysize)
         for (int xi = 0; xi < xsize; xi++)
         {
             // the yi line's xi element
-            // TODO generated weird charactor here, need an in-depth investigation!
             int index = (int)*(buf + yi * wrap + xi);
             index = index % (strlen(PIXELS) -1);
             // write a char into file
-            fprintf(stdout, "%c ", &PIXELS[index]);
+            fprintf(stdout, "%c ", PIXELS[index]);
         }
         fwrite(&newline, 1, 1, stdout);
     }
