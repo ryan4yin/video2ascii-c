@@ -1,0 +1,7 @@
+*.mp4
+.vscode/
+
+*.out
+bin/
+objs/
+
