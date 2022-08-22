@@ -22,10 +22,10 @@
 
 // print out the steps and errors
 static void logging(const char *fmt, ...);
-static int decode_packet_and_resize_frames(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFrame *tmpFrame1, AVFrame *tmpFrame2, int resized_width, int resized_height);
 // open video files, guess it's codec, find and return the video stream's index
 static int open_video_stream(char *filename, AVFormatContext *pFormatContext, AVCodec **pCodec, AVCodecParameters **pCodecParameters);
 // decode packets into frames
+static int decode_packet_and_resize_frames(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFrame *tmpFrame1, AVFrame *tmpFrame2, int resized_width, int resized_height);
 static int resize_image(AVCodecContext *codec_context, AVFrame *input_frame, AVFrame *output_frame, int resized_width, int resized_height);
 
 static void print_charimg(unsigned char *buf, int wrap, int xsize, int ysize);
