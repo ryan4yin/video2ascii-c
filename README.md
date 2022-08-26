@@ -24,6 +24,16 @@ sudo zypper in ffmpeg-5 \
 sudo zypper in mpv
 ```
 
+and for MacOS X with homebrew:
+
+```shell
+# install clang complier if you haven't install it yet
+xcode-select --install
+
+# install dependencies
+brew install ffmpeg@5 ncurses
+```
+
 ## Build and Run
 
 Build and run the program via `clang`:
